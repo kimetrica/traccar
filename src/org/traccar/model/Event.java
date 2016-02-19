@@ -30,6 +30,9 @@ public abstract class Event extends Extensible {
     public static final String KEY_STATUS = "status";
     public static final String KEY_ODOMETER = "odometer";
     public static final String KEY_HOURS = "hours";
+    public static final String KEY_C4 = "c4";	
+    public static final String KEY_C5 = "c5";
+    public static final String KEY_C6 = "c6";
     public static final String KEY_INPUT = "input";
     public static final String KEY_OUTPUT = "output";
     public static final String KEY_POWER = "power";

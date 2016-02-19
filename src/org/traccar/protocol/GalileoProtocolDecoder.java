@@ -50,6 +50,9 @@ public class GalileoProtocolDecoder extends BaseProtocolDecoder {
     private static final int TAG_ODOMETER = 0xd4;
     private static final int TAG_REFRIGERATOR = 0x5b;
     private static final int TAG_PRESSURE = 0x5c;
+    private static final int TAG_C4 = 0xc4;
+    private static final int TAG_C5 = 0xc5;
+    private static final int TAG_C6 = 0xc6;
 
     private static final Map<Integer, Integer> TAG_LENGTH_MAP = new HashMap<>();
 
@@ -181,6 +184,18 @@ public class GalileoProtocolDecoder extends BaseProtocolDecoder {
 
                 case TAG_ODOMETER:
                     position.set(Event.KEY_ODOMETER, buf.readUnsignedInt());
+                    break;
+
+                case TAG_C4:
+                    position.set(Event.KEY_C4, buf.readUnsignedByte());
+                    break;
+
+                case TAG_C5:
+                    position.set(Event.KEY_C5, buf.readUnsignedByte());
+                    break;
+
+                case TAG_C6:
+                    position.set(Event.KEY_C6, buf.readUnsignedByte());
                     break;
 
                 default:
